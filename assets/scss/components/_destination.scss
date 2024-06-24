@@ -91,9 +91,9 @@
       @include d-flex(row, center, flex-start);
       gap: 15px;
     }
-
-
   }
+
+  //************* media Query   ************************
 
   @media (max-width:1024px) {
     margin-bottom: 5rem;

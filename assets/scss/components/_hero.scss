@@ -88,11 +88,6 @@
     padding: 20px 18px 17px 19px;
     border-radius: 50%;
     cursor: pointer;
-
-
-    &:hover {
-      transform: scaleX(-1);
-    }
   }
 
   &__palyIcon {
@@ -105,8 +100,6 @@
       width: 100%;
       display: block;
     }
-
-
   }
 
   &__right {
@@ -180,6 +173,7 @@
     }
   }
 
+  //************* media Query   ************************
   // media Query 1024
 
   @media (max-width:(1024px)) {
