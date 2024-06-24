@@ -52,7 +52,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      color: #39425D;
+      color: $dim-gray;
       display: flex;
       flex-direction: row;
       gap: 1rem;
@@ -84,7 +84,7 @@
     padding: 74px 68px 34px 34px;
     position: relative;
     background-color: $white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba($black, .35) 0px 5px 15px;
 
   }
 
@@ -109,7 +109,6 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    // z-index: -2;
 
     img {
       max-width: 67px;
@@ -189,8 +188,6 @@
       margin-bottom: 0.75rem;
       font-size: 1rem;
     }
-
-
 
     &__heading {
       font-size: 1.5rem;

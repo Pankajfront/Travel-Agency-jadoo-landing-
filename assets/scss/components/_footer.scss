@@ -45,7 +45,7 @@
 
   &__link {
     color: $primary-color;
-    font-weight: 500;
+    font-weight: $fw-medium;
     font-family: $font-Poppins;
     transition: 0.3s ease;
 
@@ -135,15 +135,13 @@
 
   &__titleIcon {
     font-family: $font-Poppins;
-    font-weight: 500;
+    font-weight: $fw-medium;
     margin-bottom: 1rem;
     color: $primary-color;
   }
 
   &__googleBtns {
-    display: flex;
-    justify-content: start;
-    align-items: start;
+    @include d-flex(row, flex-start, flex-start);
     gap: 7px;
 
 

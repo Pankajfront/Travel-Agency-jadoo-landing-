@@ -4,7 +4,6 @@
   &__wrap {
     margin-bottom: 156px;
     position: relative;
-    // overflow: hidden;
 
     &::after {
       content: url("/assets/images/bg-plusImg.svg");
@@ -48,8 +47,7 @@
     background: $white;
     z-index: 1;
     transition: 0.3s ease;
-
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 5px 15px rgba($black, 0.5);
 
     &:hover {
       transition: 0.3s ease;
@@ -92,7 +90,7 @@
       left: 40px;
       width: 50px;
       height: 49px;
-      background: #FFF1DA;
+      background: $light-pink;
       z-index: -1;
       border-radius: 10% 20% 40% 10%;
     }
@@ -247,7 +245,6 @@
         &::after {
           bottom: -10px;
           left: -10px;
-
         }
       }
     }
