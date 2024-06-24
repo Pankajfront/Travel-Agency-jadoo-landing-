@@ -16,8 +16,7 @@ close.addEventListener("click", () => {
 
 })
 
-// swiper slider
-
+// ***** swiper slider js ***** 
 // destinations
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
@@ -51,7 +50,7 @@ var swiper = new Swiper(".mySwiper", {
 
 });
 
-// Testmonial section 
+// Testmonial section
 var swiper = new Swiper(".Swiper", {
   slidesPerView: 1,
   direction: "vertical",
@@ -88,15 +87,19 @@ var swiper = new Swiper(".bannerSwiper", {
   grid: {
     rows: 1,
   },
+  freeMode: true,
+  loop: true,
+  allowTouchMove: false,
+  allowTouchMove: true,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  speed: 800,
   centeredSlides: true,
-
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-  },
-  autoplay: {
-    delay: 100,
-    disableOnInteraction: false,
   },
   breakpoints: {
     320: {
@@ -118,4 +121,5 @@ var swiper = new Swiper(".bannerSwiper", {
   }
 
 });
+
 
