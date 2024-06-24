@@ -1,11 +1,9 @@
 .testmnls {
-  // overflow: hidden;
   margin-bottom: 96px;
   position: relative;
 
   &__wrap {
     @include d-flex(row, flex-start, space-between);
-
     margin-bottom: 96px;
     gap: 50px;
     position: relative;
@@ -38,7 +36,6 @@
   }
 
   & .swiper {
-
     position: relative;
 
     &-nav {
@@ -49,7 +46,6 @@
       right: 0;
       transform: translate(0px, 166px);
       z-index: 9;
-
     }
 
     &-pagination {

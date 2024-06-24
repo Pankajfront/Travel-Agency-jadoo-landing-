@@ -1,8 +1,5 @@
-// Trip post
-
 .post {
   &__wrap {
-    // @include d-flex (row, center, space-between);
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
@@ -10,21 +7,10 @@
     gap: 118px;
     margin-bottom: 200px;
     position: relative;
-
-    // &::after {
-    //   content: "";
-    //   height: 300px;
-    //   top: 0;
-    //   right: 0;
-    //   position: absolute;
-    //   background-color: #006380;
-    //   opacity: 80%
-    // }
   }
 
   &__info {
     @include d-flex (row, center, flex-start);
-
     gap: 21px;
     margin-bottom: 3rem;
   }
@@ -102,7 +88,6 @@
 
   &__right {
     position: relative;
-
   }
 
   &__cardTitle {
