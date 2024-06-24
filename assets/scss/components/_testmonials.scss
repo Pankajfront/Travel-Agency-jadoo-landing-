@@ -42,8 +42,7 @@
     position: relative;
 
     &-nav {
-      display: flex;
-      flex-direction: column;
+      @include d-flex(column, flex-start, flex-start);
       gap: 20px;
       position: absolute;
       top: 0;
@@ -125,7 +124,15 @@
     }
   }
 
-  // media query 71024
+  @media (max-width:1199px) {
+    & .swiper {
+      &-nav {
+        right: 26px;
+      }
+    }
+  }
+
+  // media query 1024
   @media (max-width:1024px) {
     margin-bottom: 5rem;
 
@@ -169,10 +176,7 @@
     &__left {
       max-width: 100%;
       width: 100%;
-
     }
-
-
   }
 
   // media query 480
