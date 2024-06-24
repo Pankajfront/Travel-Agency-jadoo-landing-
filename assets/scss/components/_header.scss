@@ -1,0 +1,157 @@
+.top {
+  position: relative;
+  overflow: hidden;
+
+  &__topWrap {
+    background-image: url("/assets/images/bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+    // background-position-y: -40px;
+    position: relative;
+    z-index: 99;
+  }
+
+  & .nav {
+    padding: 3rem 0 1rem 0;
+
+    &__wrap {
+      @include d-flex(row, center, space-between);
+      gap: 1rem;
+    }
+
+    &__list {
+      @include d-flex(row, center, space-between);
+      gap: 3rem;
+    }
+
+    &__link,
+    &__signLnk,
+    &__langDrop {
+      color: $light-black;
+      font-size: 17px;
+      font-weight: $fw-medium;
+      font-family: $font-Opan-sans;
+      transition: 0.3s ease;
+    }
+
+    &__link {
+      &:hover {
+        color: $light-red;
+      }
+    }
+
+    &__signinLnk {
+      color: $light-black;
+      font-size: 17px;
+      font-weight: $fw-medium;
+      font-family: $font-Opan-sans;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: $light-red;
+      }
+    }
+
+    &__signupLnk {
+      padding: 9px 22px;
+      border-radius: 5px;
+      border: 1px solid $light-black;
+      color: $light-black;
+      font-size: 17px;
+      font-weight: $fw-medium;
+      font-family: $font-Opan-sans;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: $light-red;
+        border-color: transparent;
+        color: $white;
+      }
+    }
+
+    &__langDrop {
+      @include d-flex(row, center, center);
+      gap: 6px;
+      background: inherit;
+    }
+
+    &__langIcon {
+      &:hover {
+        transform: scaleX(-1);
+      }
+    }
+
+    &__bar {
+      display: none;
+    }
+
+    &__close {
+      display: none;
+
+      & i {
+        font-size: 30px;
+      }
+    }
+
+    // media Query 1024
+
+    @media (max-width:(1024px)) {
+      padding-top: 2rem;
+
+      &__list {
+        gap: 1rem;
+      }
+    }
+
+    // media Query 768
+
+    @media (max-width:(768px)) {
+      padding-top: 1rem;
+
+      &__wrap {
+        align-items: center;
+      }
+
+      &__list {
+        @include d-flex(column, flex-end, flex-start);
+        gap: 2rem;
+        padding: 70px 1rem 0 0;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 100%;
+        z-index: 99;
+        width: 0;
+        max-width: 300px;
+        height: 100vh;
+        background-color: $white;
+        box-shadow: 0px 0px 10px 0px #181a2a;
+        transition: 0.5s ease-in-out;
+        justify-content: flex-start;
+        z-index: 999;
+      }
+
+      &__list.active {
+        top: 0;
+        right: 0px;
+        width: 100%;
+      }
+
+      &__bar {
+        display: flex;
+
+        & i {
+          font-size: 30px;
+        }
+      }
+
+      &__close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+    }
+  }
+
+}

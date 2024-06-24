@@ -1,0 +1,292 @@
+.hero {
+  overflow: hidden;
+
+  &__wrap {
+    margin-bottom: 97px;
+    @include d-flex(row, center, space-between);
+  }
+
+  &__right,
+  &__left {
+    max-width: 50%;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+    color: $light-red ;
+    font-family: $font-Poppins
+  }
+
+  &__heading {
+    color: $tertiary-color;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  &__headBg {
+    &::after {
+      content: url("/assets/images/Decore.svg");
+      position: absolute;
+      top: 10px;
+      left: 45%;
+      z-index: -999;
+      max-width: 385px;
+      width: 100%;
+      height: auto;
+    }
+
+  }
+
+  &__desc {
+    margin-bottom: 34px;
+    line-height: 185%;
+    color: $primary-color;
+  }
+
+  &__btns {
+    @include d-flex(row, flex-start, flex-start);
+    gap: 44px;
+  }
+
+  &__more {
+    padding: 18px 26px;
+    color: $white;
+    background: $light-yellow;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-family: $font-Opan-sans;
+    transition: .3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background: $primary-color;
+    }
+  }
+
+  &__play {
+    @include d-flex(row, center, flex-start);
+    max-width: 174px;
+    width: 100%;
+    height: auto;
+    gap: 1.25rem;
+    color: $dark-gray;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+    padding: 4px;
+    border-radius: .5rem;
+    outline: none;
+    background: transparent;
+  }
+
+  &__palyBtn {
+    max-width: 52px;
+    width: 100%;
+    height: 52px;
+    background: $light-red;
+    padding: 20px 18px 17px 19px;
+    border-radius: 50%;
+    cursor: pointer;
+
+
+    &:hover {
+      transform: scaleX(-1);
+    }
+  }
+
+  &__palyIcon {
+    max-width: 15px;
+    width: 100%;
+
+    & img {
+      max-width: 15px;
+      height: 15px;
+      width: 100%;
+      display: block;
+    }
+
+
+  }
+
+  &__right {
+    position: relative;
+
+    &::before {
+      content: url("/assets/images/plane.svg");
+      position: absolute;
+      top: 0;
+      left: 20%;
+      max-width: 138px;
+      width: 100%;
+      max-height: 154px;
+      height: 100%;
+      -webkit-animation: upNdown 3s infinite linear;
+      animation: upNdown 3s infinite linear;
+
+    }
+
+    &::after {
+      content: url("/assets/images/plane.svg");
+      position: absolute;
+      top: 60px;
+      right: -12px;
+      max-width: 138px;
+      width: 100%;
+      max-height: 154px;
+      height: 100%;
+      z-index: -99;
+      -webkit-animation: upNdown 3s infinite linear;
+      animation: upNdown 2s infinite linear;
+    }
+
+
+    @-webkit-keyframes upNdown {
+      0% {
+        transform: translate(-45px);
+      }
+
+      50% {
+        transform: translate(-5px);
+      }
+
+      100% {
+        transform: translate(-45px);
+      }
+    }
+
+    @keyframes upNdown {
+      0% {
+        transform: translate(-25px);
+      }
+
+      50% {
+        transform: translate(-5px);
+      }
+
+      100% {
+        transform: translate(-25px);
+      }
+    }
+
+  }
+
+  &__img {
+    & img {
+      max-width: 765px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  // media Query 1024
+
+  @media (max-width:(1024px)) {
+    &__wrap {
+      margin-bottom: 5rem;
+    }
+
+    &__heading {
+      font-size: 60px;
+      margin-bottom: 1rem;
+    }
+
+    &__btns {
+      gap: 2rem;
+    }
+
+  }
+
+  // media Query 768
+  @media (max-width:(768px)) {
+    &__wrap {
+      flex-direction: column-reverse;
+      margin-bottom: 4rem;
+    }
+
+    &__right,
+    &__left {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &__img {
+      padding-inline: 1rem;
+
+      & img {
+        max-width: 530px;
+
+      }
+    }
+
+  }
+
+  // media Query 480
+
+  @media (max-width:(480px)) {
+    &__wrap {
+      margin-bottom: 3rem;
+    }
+
+    &__right {
+      &::before {
+        left: 0%;
+      }
+
+    }
+
+    &__title {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    &__heading {
+      font-size: 3rem;
+    }
+
+    &__desc {
+      font-size: 14px;
+      margin-bottom: 1rem;
+    }
+
+    &__left {
+      @include d-flex(column, center, center);
+      text-align: center;
+    }
+
+    &__btns {
+      gap: 1rem;
+    }
+
+    &__more {
+      font-size: 14px;
+      padding: 0.75rem 1rem;
+    }
+
+    &__play {
+      max-width: max-content;
+      width: 100%;
+      height: auto;
+      gap: 0.8rem;
+    }
+
+    &__palyBtn {
+      max-width: max-content;
+      height: auto;
+      padding: 7px 10px 7px 11px;
+      font-size: 14px;
+    }
+
+    &__palyIcon {
+      max-width: 10px;
+      width: 100%;
+
+      & img {
+        max-width: max-content;
+        height: max-content;
+      }
+    }
+
+  }
+}

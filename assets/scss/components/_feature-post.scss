@@ -1,0 +1,323 @@
+// Trip post
+
+.post {
+  &__wrap {
+    // @include d-flex (row, center, space-between);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 118px;
+    margin-bottom: 200px;
+    position: relative;
+
+    // &::after {
+    //   content: "";
+    //   height: 300px;
+    //   top: 0;
+    //   right: 0;
+    //   position: absolute;
+    //   background-color: #006380;
+    //   opacity: 80%
+    // }
+  }
+
+  &__info {
+    @include d-flex (row, center, flex-start);
+
+    gap: 21px;
+    margin-bottom: 3rem;
+  }
+
+  &__title {
+    color: $primary-color;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  &__heading {
+    margin-bottom: 31px;
+    color: $secondary-color;
+  }
+
+  &__infoIcon {
+    padding: 13px;
+    border-radius: 13px;
+    max-width: 47px;
+    width: 100%;
+    height: auto;
+    background-color: $light-yellow;
+
+    &--water {
+      background-color: $light-red;
+    }
+
+    &--vahicle {
+      background-color: #006380;
+    }
+
+    & img {
+      max-width: 22px;
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+
+  }
+
+  &__infoTitle {
+    color: $primary-color ;
+  }
+
+  &__infoDesc {
+    color: $primary-color;
+    font-weight: 400;
+  }
+
+  &__card {
+    max-width: 370px;
+    width: 100%;
+    height: auto;
+    padding: 20px 24px 36px 25px;
+    background-color: $white;
+    border-radius: 26px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+    background-color: $white;
+    box-shadow: 65px -92px 114px -75px #59B1E8;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__cardImg {
+    margin-bottom: 26px;
+
+    & img {
+      max-width: 321px;
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 24px;
+    }
+  }
+
+  &__right {
+    position: relative;
+
+  }
+
+  &__cardTitle {
+    margin-bottom: 13px;
+  }
+
+  &__date,
+  &__author {
+    color: $primary-color;
+  }
+
+  &__cardDetail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 21px;
+  }
+
+  &__innerIcons {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__innerIcon {
+    max-width: 36px;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+
+    & img {
+      max-width: 14px;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__cardBtm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+  }
+
+  &__cardBtm-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__totalPle {
+    color: $primary-color;
+  }
+
+  &__cardBtmIcon {
+    & img {
+      max-width: 16px;
+      height: auto;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__heartIcon {
+    & img {
+      max-width: 20px;
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+  }
+
+  &__ongoing {
+    max-width: 263px;
+    width: 100%;
+    height: auto;
+    padding: 18px 20px 22px 20px;
+    border-radius: 18px;
+    position: absolute;
+    top: 40%;
+    right: 45px;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: $white;
+  }
+
+  &__ongoing-inner {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+  }
+
+  &__ongoing-title {
+    margin-bottom: 6px;
+  }
+
+  &__ongoing-heading {
+    margin-bottom: 14px;
+  }
+
+  &__ongoing-img {
+    & img {
+      max-width: 50px;
+      border-radius: 50%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__progresHeading {
+    color: $purple;
+  }
+
+  &__percentage {
+    color: $black;
+  }
+
+  &__progresBar {
+    max-width: 156px;
+    width: 100%;
+    height: 5px;
+    background-color: #F5F5F5;
+    display: flex;
+  }
+
+  &__purple {
+    background: $purple;
+    max-width: 73px;
+    width: 100%;
+    border-radius: 30px;
+  }
+
+  @media (max-width:1024px) {
+    &__wrap {
+      gap: 4rem;
+
+    }
+
+    &__heading {
+      margin-bottom: 1.5rem;
+    }
+
+    &__ongoing {
+      top: 92%;
+    }
+
+  }
+
+  @media (max-width:768px) {
+    &__wrap {
+      // grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 10rem;
+    }
+
+    &__card {
+      box-shadow: 65px -92px 114px -120px #59B1E8;
+      z-index: 2;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__heading {
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+
+    &__info {
+      margin-bottom: 1.5rem;
+    }
+
+    &__infoTitle {
+      font-size: 1rem;
+    }
+
+    &__infoDesc {
+      font-size: 14px;
+    }
+
+    &__ongoing {
+      top: 94%;
+      right: 14px;
+      z-index: 3;
+      mix-blend-mode: hard-light;
+    }
+  }
+
+  @media (max-width:480px) {
+    &__title {
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    &__heading {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+
+    &__cardTitle {
+      font-size: 1rem;
+    }
+
+    &__date,
+    &__author {
+      font-size: 14px;
+    }
+  }
+}

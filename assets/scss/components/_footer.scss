@@ -1,0 +1,259 @@
+.ftr {
+  &__wrap {
+    margin-bottom: 80px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 82px;
+    margin-bottom: 84px;
+  }
+
+  &__logo {
+    margin-bottom: 1.25rem;
+
+    & img {
+      max-width: 152px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__desc {
+    color: $primary-color;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 72px;
+  }
+
+  &__heading {
+    color: $primary-color;
+    font-size: 21px;
+    font-family: $font-Poppins;
+    color: $dark-black ;
+    margin-bottom: 34px;
+  }
+
+  &__item {
+    margin-bottom: 14px;
+  }
+
+  &__link {
+    color: $primary-color;
+    font-weight: 500;
+    font-family: $font-Poppins;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  &__icons {
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 25px;
+  }
+
+  &__icon {
+    padding: 1rem 17px;
+    max-width: 41px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    & img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    &--fb {
+      max-width: 41px;
+      padding: 16px 17px;
+
+      &:hover {
+        background-color: #3b5998;
+
+        & img {
+          filter: brightness(0) saturate(100%) invert(93%) sepia(46%) saturate(2%) hue-rotate(298deg) brightness(109%) contrast(100%);
+        }
+
+      }
+
+      & img {
+        max-width: 7px;
+      }
+    }
+
+    &--insta {
+      max-width: 45px;
+      padding: 14px 15px;
+
+      & img {
+        max-width: 1rem;
+        filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(0%) hue-rotate(28deg) brightness(95%) contrast(105%);
+      }
+
+      &:hover {
+        background: conic-gradient(from 180deg at 50% 50%, #B8D2F1 0deg, #F289AA 60deg, #C68BF0 106.09deg, #D164DA 153.75deg, #C963E8 221.25deg, #BFC2E8 258.75deg, #FFC999 288.75deg, #D0D8C9 315deg, #BAD0F1 334.13deg, #CED8CB 358.97deg, rgba(255, 255, 255, 0) 360deg);
+
+        & img {
+          filter: brightness(0) saturate(100%) invert(93%) sepia(46%) saturate(2%) hue-rotate(298deg) brightness(109%) contrast(100%);
+        }
+      }
+    }
+
+    &--twitr {
+      background-color: $white;
+      padding: 14px 13px;
+
+      & img {
+        max-width: 1rem;
+
+      }
+
+      &:hover {
+        background-color: #55acee;
+
+        & img {
+          filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(329deg) brightness(105%) contrast(105%);
+        }
+      }
+    }
+
+  }
+
+  &__titleIcon {
+    font-family: $font-Poppins;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: $primary-color;
+  }
+
+  &__googleBtns {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 7px;
+
+
+    & img {
+      max-width: 107px;
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+  }
+
+  &__copyDesc {
+    text-align: center;
+    color: $primary-color;
+  }
+
+  &__copyLink {
+    color: $primary-color;
+    transition: 0.3s ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width:1024px) {
+    &__wrap {
+      margin-bottom: 5rem;
+    }
+
+    &__inner {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+
+    &__logo {
+      & img {
+        max-width: 140px;
+      }
+    }
+
+    &__right {
+      grid-column: 1/spa;
+      @include d-flex(column, center, flex-start);
+    }
+
+    &__menu {
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width:768px) {
+    &__wrap {
+      margin-bottom: 3rem;
+    }
+
+    &__logo {
+      & img {
+        max-width: 120px;
+      }
+    }
+
+    &__inner {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    &__heading {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    &__link {
+      font-size: 14px;
+    }
+
+    &__dec {
+      font-size: 0.75rem;
+    }
+
+    &__menu {
+      gap: 2rem;
+
+    }
+
+    &__titleIcon {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width:480px) {
+    &__wrap {
+      margin-bottom: 2rem;
+    }
+
+    &__logo {
+      margin-bottom: 1rem;
+
+      & img {
+        max-width: 100px;
+      }
+    }
+
+    &__inner {
+      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

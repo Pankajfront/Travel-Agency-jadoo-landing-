@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    body {
+      background: #e4e8eb;
+      font-family: Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    .swiper-container {
+      width: 600px;
+      height: 371px;
+
+      .swiper-pagination-h {
+        left: 50%;
+        width: 500px;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+    }
+
+    .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 8px 0;
+    }
+
+    .swiper-slide {
+      height: 100%;
+      width: 100%;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      /* In safari, the buttons disappear on some slide,
+  to fix this issue set translate3D z axis to 1px */
+      -webkit-transform: translate3d(0, 0, 1px);
+      -ms-transform: translate3d(0, 0, 1px);
+      -o-transform: translate3d(0, 0, 1px);
+      transform: translate3d(0, 0, 1px);
+    }
+
+    .swiper-button-next {
+      margin-right: 10px;
+    }
+
+    .swiper-button-prev {
+      margin-left: 10px;
+    }
+
+    .swiper-button-up,
+    .swiper-button-down {
+      left: 20px;
+      position: absolute;
+      z-index: 20;
+
+      &:before {
+        background-position: center;
+        background-repeat: no-repeat;
+        -moz-background-size: 27px 44px;
+        -webkit-background-size: 27px 44px;
+        background-size: 27px 44px;
+        content: "";
+        cursor: pointer;
+        height: 44px;
+        width: 27px;
+        position: absolute;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+    }
+
+    .swiper-button-down {
+      top: 10px;
+
+      &:before {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007AFF'%2F%3E%3C%2Fsvg%3E");
+      }
+    }
+
+    .swiper-button-up {
+      bottom: 50px;
+
+      &:before {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007AFF'%2F%3E%3C%2Fsvg%3E");
+      }
+    }
+
+    .swiper-pagination-bullet {
+      opacity: 0.5;
+      border-radius: 100%;
+      background: rgb(255, 255, 255);
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      background-color: rgb(255, 255, 255);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <!-- Swiper -->
+  <div class="swiper-container swiper-container-h">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="swiper-container swiper-container-v">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/03A9F4/ffffff?text=Slide 1a" />
+            </div>
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/29B6F6/ffffff?text=Slide 1b" />
+            </div>
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/4FC3F7/ffffff?text=Slide 1c" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="swiper-container swiper-container-v">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/4CAF50/ffffff?text=Slide 2a" />
+            </div>
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/66BB6A/ffffff?text=Slide 2b" />
+            </div>
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/81C784/ffffff?text=Slide 2c" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="swiper-container swiper-container-v">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/FFA000/ffffff?text=Slide 3a" />
+            </div>
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/FFB300/ffffff?text=Slide 3b" />
+            </div>
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/FFC107/ffffff?text=Slide 3c" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <div class="swiper-container swiper-container-v">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/607D8B/ffffff?text=Slide 4a" />
+            </div>
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/78909C/ffffff?text=Slide 4b" />
+            </div>
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/90A4AE/ffffff?text=Slide 4c" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 5 -->
+      <div class="swiper-slide">
+        <div class="swiper-container swiper-container-v">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/673AB7/ffffff?text=Slide 5a" />
+            </div>
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/7E57C2/ffffff?text=Slide 5b" />
+            </div>
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/9575CD/ffffff?text=Slide 5c" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 6 -->
+      <div class="swiper-slide">
+        <div class="swiper-container swiper-container-v">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/AFB42B/ffffff?text=Slide 6a" />
+            </div>
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/C0CA33/ffffff?text=Slide 6b" />
+            </div>
+            <div class="swiper-slide"><img src="https://via.placeholder.com/600x371/CDDC39/ffffff?text=Slide 6c" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End wrapper -->
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-h"></div>
+    <div class="swiper-container-vertical">
+      <div class="swiper-pagination swiper-pagination-v"></div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- Add Vertical Arrows -->
+    <div class="swiper-button-up"></div>
+    <div class="swiper-button-down"></div>
+  </div>
+  <p>
+    Swiper doesn't start from the first Slide 1a when using the cube effect.
+  </p>
+  <p>
+    When using the default slide effect or another one, all works fine.
+  </p>
+  <p>
+    Another issues:
+    <br />in Safari the navigation buttons could disappear on some slide (see the fix in SCSS pane)
+  </p>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiperH = new Swiper('.swiper-container-h', {
+      pagination: '.swiper-pagination-h',
+      paginationClickable: true,
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      //slidesPerGroup: 1,
+      //slidesPerView: 1,
+      speed: 600,
+      loop: true,
+      effect: 'cube', // other effects: slide, fade, coverflow, flip
+      cube: {
+        slideShadows: false,
+        shadow: false
+      },
+      onInit: function (swiper) {
+        console.log('Active index: ' + swiper.activeIndex);
+      }
+    });
+    var swiperV = new Swiper('.swiper-container-v', {
+      pagination: '.swiper-pagination-v',
+      paginationClickable: true,
+      nextButton: '.swiper-button-up',
+      prevButton: '.swiper-button-down',
+      speed: 600,
+      loop: true,
+      direction: 'vertical',
+      //effect: 'cube',
+    });
+
+  </script>
+</body>
+
+</html>

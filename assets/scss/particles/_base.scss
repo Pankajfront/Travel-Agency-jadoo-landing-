@@ -1,0 +1,51 @@
+h1 {
+  font-size: $fs-8xl;
+  font-weight: $fw-bold;
+  line-height: 110%;
+  font-family: $font-Volkhov;
+}
+
+h2 {
+  font-size: $fs-6xl;
+  font-weight: $fw-bold;
+  line-height: 130%;
+  font-family: $font-Volkhov;
+}
+
+h3 {
+  font-size: $fs-2xl;
+  font-weight: $fw-bold;
+  line-height: 150%;
+}
+
+p {
+  font-family: $font-Poppins;
+}
+
+.text {
+  font-weight: $fw-medium;
+  font-family: $font-Poppins;
+
+  &__text-xs {
+    font-size: $text-xs;
+    line-height: 150%;
+  }
+
+  &__text-sm {
+    font-size: $fs-md;
+    line-height: 155%;
+    font-weight: $fw-medium;
+  }
+
+  &__text-base {
+    font-size: $fs-lg;
+    font-weight: $fw-medium;
+    line-height: 135%;
+    font-family: $font-Poppins;
+  }
+
+  &__text-lg {
+    font-size: $fs-xl;
+    line-height: 125%;
+  }
+}

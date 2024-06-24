@@ -1,0 +1,259 @@
+.categrs {
+  overflow: hidden;
+
+  &__wrap {
+    margin-bottom: 156px;
+    position: relative;
+    // overflow: hidden;
+
+    &::after {
+      content: url("/assets/images/bg-plusImg.svg");
+      position: absolute;
+      top: -30px;
+      right: -80px;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    text-align: center;
+    color: $primary-color;
+    font-weight: $fw-semibold;
+  }
+
+  &__heading {
+    margin-bottom: 66px;
+    text-align: center;
+    color: $secondary-color;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 38px;
+  }
+
+  &__card {
+    max-width: 267px;
+    max-width: 315px;
+    width: 100%;
+    height: auto;
+    padding: 40px 42px 45px 44px;
+    border-radius: 36px;
+    @include d-flex(column, center, center);
+    text-align: center;
+    transition: 0.3s ease;
+    position: relative;
+    background: $white;
+    z-index: 1;
+    transition: 0.3s ease;
+
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+
+    &:hover {
+      transition: 0.3s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -33px;
+        left: -35px;
+        background: $light-red;
+        max-width: 100px;
+        width: 100%;
+        height: 100px;
+        border-radius: 30% 0 10% 0;
+        z-index: -1;
+        mix-blend-mode: soft-light;
+      }
+    }
+  }
+
+  &__cardTitle {
+    font-size: 20px;
+    font-weight: $fw-semibold;
+    font-family: $font-Opan-sans;
+    color: $light-blue;
+    margin-bottom: 15px;
+
+  }
+
+  &__cardTop {
+    position: relative;
+  }
+
+  &__icon {
+
+    // margin-bottom: 37px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      left: 40px;
+      width: 50px;
+      height: 49px;
+      background: #FFF1DA;
+      z-index: -1;
+      border-radius: 10% 20% 40% 10%;
+    }
+
+    & img {
+      max-width: 66px;
+      width: 100%;
+      height: auto;
+      display: block;
+      -webkit-animation: upNdown 3s infinite linear;
+      animation: upNdown 2s infinite linear;
+    }
+
+    &--plane {
+      & img {
+        max-width: 128px;
+        -webkit-animation: upNdown 3s infinite linear;
+        animation: upNdown 2s infinite linear;
+        animation-duration: 3s;
+      }
+
+      &::after {
+        top: 10px;
+        left: 30px;
+        border-radius: 10% 20% 42% 40%;
+      }
+    }
+
+    &--mike {
+      & img {
+        max-width: 40px;
+        animation-name: move;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes move {
+        from {
+          transform: rotate(30deg);
+        }
+
+        to {
+          transform: translate3d(45deg);
+        }
+      }
+
+      &::after {
+        top: -6px;
+        left: 16px;
+        border-radius: 10% 42% 10% 40%;
+      }
+    }
+
+    &--setting {
+      & img {
+        max-width: 50px;
+        animation-name: rotate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      &::after {
+        top: 16px;
+        left: 30px;
+        border-radius: 10% 10% 10% 40%;
+      }
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(-360deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  // media Query 1024
+
+  @media (max-width:1024px) {
+
+    &__wrap {
+      margin-bottom: 5rem;
+    }
+
+    &__inner {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__heading {
+      margin-bottom: 3rem;
+    }
+  }
+
+  // media Query 768
+
+  @media (max-width:768px) {
+    &__wrap {
+      margin-bottom: 3rem;
+    }
+
+    &__card {
+      z-index: 1;
+      mix-blend-mode: soft-light;
+
+      &:hover {
+        &::after {
+          bottom: -10px;
+          left: -10px;
+          z-index: 1;
+        }
+      }
+    }
+
+    &__inner {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__heading {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  // media Query 480
+
+  @media (max-width:480px) {
+    &__wrap {
+      margin-bottom: 2rem;
+    }
+
+    &__title {
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    &__heading {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    &__card {
+      max-width: 100%;
+
+      &:hover {
+        &::after {
+          bottom: -10px;
+          left: -10px;
+
+        }
+      }
+    }
+
+    &__inner {
+      @include d-flex(column, center, center);
+      gap: 1rem;
+    }
+  }
+}

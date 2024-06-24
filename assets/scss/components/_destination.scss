@@ -1,0 +1,134 @@
+.destntns {
+  position: relative;
+  margin-bottom: 170px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 8px;
+    color: $primary-color;
+    position: relative;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__wrap {
+    &::after {
+      content: url("/assets/images/bg-swiper.svg");
+      position: absolute;
+      bottom: 62px;
+      right: 17px;
+      z-index: -999;
+      max-width: 96px;
+      height: 252px;
+
+    }
+  }
+
+  & .swiper {
+    max-width: 1134px;
+    width: 100%;
+    padding-inline: 2rem;
+    position: relative;
+
+    &-wrapper {
+      @include d-flex(row, center, space-between);
+    }
+
+    &-slide {
+      border-radius: 24px 24px 0 0;
+      z-index: 999;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      max-width: 340px;
+      width: 100%;
+      margin-bottom: 1rem;
+      background-color: $white;
+      cursor: pointer;
+    }
+
+    &-pagination {
+      display: none;
+    }
+
+    &-inner {
+      padding: 0 25px 42px 20px;
+      z-index: 999;
+    }
+
+    &-img {
+      margin-bottom: 27px;
+      width: 100%;
+      height: auto;
+
+      & img {
+        border-radius: 24px 24px 0 0;
+        max-width: 330px;
+        width: 100%;
+        display: block;
+        object-fit: contain;
+
+        // z-index: 999;
+      }
+
+      &-btmIcon {
+        & img {
+          max-width: 18px;
+          width: 100%;
+          display: block;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &-content {
+      @include d-flex(row, center, space-between);
+      margin-bottom: 18px
+    }
+
+    &-btm {
+      @include d-flex(row, center, flex-start);
+      gap: 15px;
+    }
+
+
+  }
+
+  @media (max-width:1024px) {
+    margin-bottom: 5rem;
+
+    &__title {
+      font-size: 1rem;
+    }
+
+    &__heading {
+      margin-bottom: 3rem;
+    }
+  }
+
+  @media (max-width:768px) {
+    margin-bottom: 3rem;
+
+    &__heading {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+
+  }
+
+  @media (max-width:480px) {
+    margin-bottom: 3rem;
+
+    &__title {
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    &__heading {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
