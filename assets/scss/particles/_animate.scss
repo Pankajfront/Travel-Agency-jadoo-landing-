@@ -1,0 +1,27 @@
+@-webkit-keyframes upDown {
+  0% {
+    transform: translate(-45px);
+  }
+
+  50% {
+    transform: translate(-5px);
+  }
+
+  100% {
+    transform: translate(-45px);
+  }
+}
+
+@keyframes upDown {
+  0% {
+    transform: translate(-25px);
+  }
+
+  50% {
+    transform: translate(-5px);
+  }
+
+  100% {
+    transform: translate(-25px);
+  }
+}
