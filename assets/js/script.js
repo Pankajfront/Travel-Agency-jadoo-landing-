@@ -2,7 +2,7 @@
 // Toggle menu
 
 const Navmenu = document.querySelector(".nav__list");
-const menuBar = document.querySelector(".nav__bar");
+const menuBar = document.querySelector(".nav__humBurger");
 const close = document.querySelector(".nav__close");
 menuBar.addEventListener("click", () => {
   Navmenu.classList.add("active");
