@@ -85,7 +85,7 @@
     width: 100%;
     height: 52px;
     background: $light-red;
-    padding: 20px 18px 17px 19px;
+    padding: 19px 14px 17px 19px;
     border-radius: 50%;
     cursor: pointer;
   }
@@ -114,8 +114,8 @@
       width: 100%;
       max-height: 154px;
       height: 100%;
-      -webkit-animation: upNdown 3s infinite linear;
-      animation: upNdown 3s infinite linear;
+      -webkit-animation: upDown 3s infinite linear;
+      animation: upDown 3s infinite linear;
 
     }
 
@@ -129,37 +129,8 @@
       max-height: 154px;
       height: 100%;
       z-index: -99;
-      -webkit-animation: upNdown 3s infinite linear;
-      animation: upNdown 2s infinite linear;
-    }
-
-
-    @-webkit-keyframes upNdown {
-      0% {
-        transform: translate(-45px);
-      }
-
-      50% {
-        transform: translate(-5px);
-      }
-
-      100% {
-        transform: translate(-45px);
-      }
-    }
-
-    @keyframes upNdown {
-      0% {
-        transform: translate(-25px);
-      }
-
-      50% {
-        transform: translate(-5px);
-      }
-
-      100% {
-        transform: translate(-25px);
-      }
+      -webkit-animation: upDown 3s infinite linear;
+      animation: upDown 2s infinite linear;
     }
 
   }
@@ -173,7 +144,6 @@
     }
   }
 
-  //************* media Query   ************************
   // media Query 1024
 
   @media (max-width:(1024px)) {
@@ -236,7 +206,7 @@
     }
 
     &__heading {
-      font-size: 3rem;
+      font-size: 40px;
     }
 
     &__desc {
@@ -268,7 +238,7 @@
     &__palyBtn {
       max-width: max-content;
       height: auto;
-      padding: 7px 10px 7px 11px;
+      padding: 8px 11px 6px 14px;
       font-size: 14px;
     }
 
