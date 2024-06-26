@@ -1,17 +1,11 @@
-.categrs {
-  overflow: hidden;
+.categ {
+  margin-bottom: 156px;
+  background-image: url("/assets/images/bg-plusImg.svg");
+  background-repeat: no-repeat;
+  background-position: left 100% top -26%;
 
-  &__wrap {
-    margin-bottom: 156px;
+  &__cont {
     position: relative;
-
-    &::after {
-      content: url("/assets/images/bg-plusImg.svg");
-      position: absolute;
-      top: -30px;
-      right: -80px;
-      z-index: -1;
-    }
   }
 
   &__title {
@@ -34,23 +28,22 @@
   }
 
   &__card {
-    max-width: 267px;
-    max-width: 315px;
     width: 100%;
+    padding: 2.25rem 1.5rem;
     height: auto;
-    padding: 40px 42px 45px 44px;
-    border-radius: 36px;
-    @include d-flex(column, center, center);
+    border-radius: 1.5rem;
+    @include d-flex(column, center, flex-start);
     text-align: center;
     transition: 0.3s ease;
     position: relative;
     background: $white;
     z-index: 1;
     transition: 0.3s ease;
-    box-shadow: 0px 5px 15px rgba($black, 0.5);
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 
     &:hover {
       transition: 0.3s ease;
+      box-shadow: rgba($black, 0.35) 0px 5px 15px;
 
       &::after {
         content: "";
@@ -69,7 +62,7 @@
   }
 
   &__cardTitle {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: $fw-semibold;
     font-family: $font-Opan-sans;
     color: $light-blue;
@@ -81,14 +74,17 @@
   }
 
   &__icon {
+    height: 70px;
+    @include d-flex-center;
+    margin-bottom: 1.25rem;
 
-    // margin-bottom: 37px;
     &::after {
       content: "";
       position: absolute;
       bottom: 20px;
       left: 40px;
-      width: 50px;
+      max-width: 50px;
+      width: 100%;
       height: 49px;
       background: $light-pink;
       z-index: -1;
@@ -96,25 +92,20 @@
     }
 
     & img {
-      max-width: 66px;
-      width: 100%;
-      height: auto;
+      max-height: 70px;
+      width: auto;
+      height: 100%;
       display: block;
-      -webkit-animation: upNdown 3s infinite linear;
-      animation: upNdown 2s infinite linear;
     }
 
     &--plane {
       & img {
         max-width: 128px;
-        -webkit-animation: upNdown 3s infinite linear;
-        animation: upNdown 2s infinite linear;
-        animation-duration: 3s;
       }
 
       &::after {
         top: 10px;
-        left: 30px;
+        left: -10px;
         border-radius: 10% 20% 42% 40%;
       }
     }
@@ -122,20 +113,6 @@
     &--mike {
       & img {
         max-width: 40px;
-        animation-name: move;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-      }
-
-      @keyframes move {
-        from {
-          transform: rotate(30deg);
-        }
-
-        to {
-          transform: translate3d(45deg);
-        }
       }
 
       &::after {
@@ -148,10 +125,6 @@
     &--setting {
       & img {
         max-width: 50px;
-        animation-name: rotate;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
       }
 
       &::after {
@@ -160,23 +133,12 @@
         border-radius: 10% 10% 10% 40%;
       }
     }
-
-    @keyframes rotate {
-      from {
-        transform: rotate(-360deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
   }
-
-  //************* media Query   ************************
 
   // media Query 1024
 
-  @media (max-width:1024px) {
+  @include smallDesktop {
+    margin-bottom: 100px;
 
     &__wrap {
       margin-bottom: 5rem;
@@ -191,16 +153,26 @@
     }
   }
 
-  // media Query 768
+  @include largeMobile {
+    margin-bottom: 80px;
 
-  @media (max-width:768px) {
     &__wrap {
       margin-bottom: 3rem;
+    }
+
+    &__heading {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    &__inner {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     &__card {
       z-index: 1;
       mix-blend-mode: soft-light;
+      width: 100%;
 
       &:hover {
         &::after {
@@ -210,20 +182,12 @@
         }
       }
     }
-
-    &__inner {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    &__heading {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
   }
 
   // media Query 480
+  @include mobile {
+    margin-bottom: 3rem;
 
-  @media (max-width:480px) {
     &__wrap {
       margin-bottom: 2rem;
     }
@@ -238,9 +202,15 @@
       margin-bottom: 1rem;
     }
 
-    &__card {
-      max-width: 100%;
+    &__inner {
+      max-width: 267px;
+      gap: 1rem;
+      width: 100%;
+      margin: 0 auto;
+      @include d-flex(column, center, flex-start)
+    }
 
+    &__card {
       &:hover {
         &::after {
           bottom: -10px;
@@ -248,10 +218,6 @@
         }
       }
     }
-
-    &__inner {
-      @include d-flex(column, center, center);
-      gap: 1rem;
-    }
   }
+
 }
