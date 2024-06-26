@@ -1,5 +1,5 @@
 <!-- complier cmd
 
-``````sass --watch assets/scss/sass:css/
+``````    sass --watch assets/scss/sass:css/  `````
 
  -->
