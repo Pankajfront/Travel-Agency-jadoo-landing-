@@ -2,7 +2,7 @@
 
   &__sec {
     position: relative;
-    z-index: 99;
+    z-index: 1;
 
     &::after {
       content: url("/assets/images/bg-star.svg");
@@ -145,8 +145,6 @@
     }
 
     &__sec {
-      z-index: 99;
-
       &::after {
         right: 0px;
         bottom: -90px;
