@@ -95,7 +95,7 @@ var swiper = new Swiper(".cmpnLogoSwiper", {
     delay: 0,
     disableOnInteraction: false,
   },
-  speed: 800,
+  speed: 2000,
   centeredSlides: true,
   pagination: {
     el: ".swiper-pagination",
