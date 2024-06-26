@@ -1,11 +1,15 @@
 .cmpnLogo {
+  margin-bottom: 111px;
 
   &__cont {
-    margin-bottom: 111px;
-
     & .swiper {
       &-slide {
         cursor: pointer;
+      }
+
+      & .quantan,
+      .aiirtelia {
+        filter: grayscale(100%);
       }
 
       &-img {
@@ -22,20 +26,23 @@
 
   // media Query 1024
   @include smallDesktop {
-    &__wrap {
-      margin-bottom: 5rem;
-    }
+    margin-bottom: 5rem;
+
   }
 
   //  media Query 768
   @include largeMobile {
-    &__wrap {
+
+    &__cont {
       margin-bottom: 4rem;
     }
   }
 
   //  media Query 480
   @include mobile {
+    margin-bottom: 4rem;
+
+
     & .swiper {
       &-slide {
         width: 250px;

@@ -35,6 +35,9 @@
       left: 20px;
       z-index: -99;
       opacity: 0.2;
+      max-width: 390px;
+      width: 100%;
+      height: auto;
     }
 
     &::after {
@@ -44,6 +47,9 @@
       right: -119px;
       opacity: 0.2;
       z-index: -3;
+      max-width: 390px;
+      width: 100%;
+      height: auto;
       transform: rotate(-122deg);
     }
   }
