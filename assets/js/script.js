@@ -16,8 +16,8 @@ close.addEventListener("click", () => {
 
 })
 
-// ***** swiper slider js ***** 
-// destinations
+//  swiper slider js  destinations section
+
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
   grid: {
@@ -82,7 +82,7 @@ var swiper = new Swiper(".Swiper", {
 });
 
 // Banner 
-var swiper = new Swiper(".bannerSwiper", {
+var swiper = new Swiper(".cmpnLogoSwiper", {
   slidesPerView: 5,
   grid: {
     rows: 1,
