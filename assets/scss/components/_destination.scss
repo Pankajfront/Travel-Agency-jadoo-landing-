@@ -37,7 +37,7 @@
     }
 
     &-slide {
-      border-radius: 24px 24px 0 0;
+      border-radius: 1.5rem;
       z-index: 999;
       box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
       max-width: 340px;
@@ -62,7 +62,7 @@
       height: auto;
 
       & img {
-        border-radius: 24px 24px 0 0;
+        border-radius: 1.5rem 1.5rem 0 0;
         max-width: 330px;
         display: block;
 
