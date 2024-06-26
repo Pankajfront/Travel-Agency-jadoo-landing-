@@ -1,8 +1,7 @@
 .post {
-  &__wrap {
+  &__cont {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
     align-items: center;
     gap: 118px;
     margin-bottom: 200px;
@@ -69,7 +68,7 @@
     border-radius: 26px;
     box-shadow: rgba($black, 0.5) 0px 5px 15px;
     background-color: $white;
-    box-shadow: 65px -92px 114px -75px $Dodger-Blue;
+    box-shadow: 65px -92px 114px -75px rgba($cyan, 0.5);
     position: relative;
     z-index: 1;
   }
@@ -107,9 +106,8 @@
   }
 
   &__innerIcons {
-    display: flex;
+    @include d-flex(row, center, flex-start);
     gap: 18px;
-    align-items: center;
     margin-bottom: 30px;
   }
 
@@ -129,16 +127,13 @@
   }
 
   &__cardBtm {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include d-flex(row, center, space-between);
     gap: 15px;
 
   }
 
   &__cardBtm-content {
-    display: flex;
-    align-items: center;
+    @include d-flex(row, center, flex-start);
     gap: 15px;
   }
 
@@ -223,10 +218,9 @@
     border-radius: 30px;
   }
 
-  //************* media Query   ************************
-
-  @media (max-width:1024px) {
-    &__wrap {
+  // media Query 1024
+  @include smallDesktop {
+    &__cont {
       gap: 4rem;
 
     }
@@ -241,11 +235,10 @@
 
   }
 
-  @media (max-width:768px) {
-    &__wrap {
-      // grid-template-columns: 1fr;
-      display: flex;
-      flex-direction: column;
+  // media Query 768
+  @include largeMobile {
+    &__cont {
+      @include d-flex(column, flex-start, flex-start);
       gap: 1rem;
       margin-bottom: 10rem;
     }
@@ -285,7 +278,9 @@
     }
   }
 
-  @media (max-width:480px) {
+  //  media Query 480
+
+  @include mobile {
     &__title {
       margin-bottom: 0.75rem;
       font-size: 1rem;
@@ -305,4 +300,5 @@
       font-size: 14px;
     }
   }
+
 }

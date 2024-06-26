@@ -135,8 +135,7 @@
   }
 
   // media queries 1199
-  @media (max-width:1199px) {
-
+  @include desktop {
     &__wrap {
       mix-blend-mode: overlay;
     }
@@ -156,8 +155,7 @@
     }
   }
 
-  @media (max-width:1024px) {
-    // overflow: hidden;
+  @include smallDesktop {
 
     &__wrap {
       padding-block: 3rem;
@@ -183,7 +181,7 @@
     }
   }
 
-  @media (max-width:768px) {
+  @include largeMobile {
     &__wrap {
       margin-bottom: 4rem;
       padding-block: 2.5rem;
@@ -211,7 +209,7 @@
     }
   }
 
-  @media (max-width:480px) {
+  @include mobile {
     &__wrap {
       margin-bottom: 3rem;
       padding-block: 2rem;
