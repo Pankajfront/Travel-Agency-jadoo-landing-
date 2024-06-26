@@ -1,6 +1,6 @@
-.banner {
+.cmpnLogo {
 
-  &__wrap {
+  &__cont {
     margin-bottom: 111px;
 
     & .swiper {
@@ -20,27 +20,22 @@
     }
   }
 
-  //************* media Query   ************************
-
   // media Query 1024
-
-  @media (max-width:1024px) {
+  @include smallDesktop {
     &__wrap {
       margin-bottom: 5rem;
     }
   }
 
-  // media Query 768
-
-  @media (max-width:768px) {
+  //  media Query 768
+  @include largeMobile {
     &__wrap {
       margin-bottom: 4rem;
     }
   }
 
-  // media Query 480
-
-  @media (max-width:480px) {
+  //  media Query 480
+  @include mobile {
     & .swiper {
       &-slide {
         width: 250px;
@@ -56,5 +51,4 @@
       }
     }
   }
-
 }
