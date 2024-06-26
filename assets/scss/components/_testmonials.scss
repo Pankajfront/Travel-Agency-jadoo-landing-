@@ -2,12 +2,11 @@
   margin-bottom: 96px;
   position: relative;
 
-  &__wrap {
+  &__cont {
     @include d-flex(row, flex-start, space-between);
     margin-bottom: 96px;
     gap: 50px;
     position: relative;
-    // max-height: 356px;
     height: 100%;
   }
 
@@ -119,9 +118,8 @@
     }
   }
 
-  //************* media Query   ************************
-
-  @media (max-width:1199px) {
+  // media Query 1199
+  @include desktop {
     & .swiper {
       &-nav {
         right: 26px;
@@ -130,7 +128,7 @@
   }
 
   // media query 1024
-  @media (max-width:1024px) {
+  @include smallDesktop {
     margin-bottom: 5rem;
 
     &__heading {
@@ -139,10 +137,10 @@
   }
 
   // media query 768
-  @media (max-width:768px) {
+  @include largeMobile {
     margin-bottom: 3rem;
 
-    &__wrap {
+    &__cont {
       flex-direction: column;
       gap: 2.5rem;
     }
@@ -177,7 +175,7 @@
   }
 
   // media query 480
-  @media (max-width:480px) {
+  @include mobile {
     margin-bottom: 2rem;
 
     &__wrap {
@@ -194,6 +192,4 @@
       margin-bottom: 1.5rem;
     }
   }
-
-
 }
